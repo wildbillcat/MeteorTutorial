@@ -44,4 +44,4 @@ git submodule update --init
 meteor add simple-schema
 meteor add collection2
 meteor add accounts-ui
-
+meteor add d3
