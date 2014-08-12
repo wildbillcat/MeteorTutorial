@@ -22,26 +22,27 @@ npm intall -g meteorite
 
 
 ##Create an app:
-mrt create Example1
-cd Example2
-Meteor
+mrt create Example1  
+cd Example2  
+Meteor  
 
 ##Add Features
-mrt create Example3
-cd Example3
+mrt create Example3  
+cd Example3  
 
 ####*Nix
-mrt add collection2
-mrt add accounts-ui
+mrt add collection2  
+mrt add accounts-ui  
+mrt add d3  
 ####*Windows
-cd packages
-git clone https://github.com/aldeed/meteor-collection2.git collection2
-cd collection2
-git submodule update --init
-cd ..
-git clone https://github.com/aldeed/meteor-simple-schema.git simple-schema
-git submodule update --init
-meteor add simple-schema
-meteor add collection2
-meteor add accounts-ui
+cd packages  
+git clone https://github.com/aldeed/meteor-collection2.git collection2  
+cd collection2  
+git submodule update --init  
+cd ..  
+git clone https://github.com/aldeed/meteor-simple-schema.git simple-schema  
+git submodule update --init  
+meteor add simple-schema  
+meteor add collection2  
+meteor add accounts-ui  
 meteor add d3
