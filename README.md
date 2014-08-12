@@ -15,17 +15,22 @@ https://www.meteor.com/
 http://win.meteor.com/
 
 ###Install Meteorite (Think RubyGems)
-Run in the Console(Git Bash on Windows)
-npm intall -g meteorite
-
+Run in the Console(Git Bash on Windows)  
+npm intall -g meteorite  
+  
 **Additional Windows ProTips: https://www.discovermeteor.com/blog/using-meteor-and-atmopshere-on-windows/
-
-
+  
+  
 ##Create an app:
 mrt create Example1  
-cd Example2  
+cd Example1  
 Meteor  
-
+  
+##Check out the Party App
+meteor create --example parties  
+cd parties  
+Meteor  
+  
 ##Add Features
 mrt create Example3  
 cd Example3  
@@ -44,5 +49,6 @@ git clone https://github.com/aldeed/meteor-simple-schema.git simple-schema
 git submodule update --init  
 meteor add simple-schema  
 meteor add collection2  
-meteor add accounts-ui  
-meteor add d3
+meteor add accounts-ui    
+meteor add d3  
+  

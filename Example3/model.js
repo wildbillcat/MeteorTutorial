@@ -52,3 +52,23 @@ Schemas.Character = new SimpleSchema({
 //Attaches the character schema to the collection
 Characters.attachSchema(Schemas.Character); 
 
+//User Schema
+Schema.User = new SimpleSchema({
+    _id: {
+        type: String,
+        regEx: SimpleSchema.RegEx.Id
+    },
+    username: {
+        type: String,
+        regEx: /^[a-z0-9A-Z_]{3,15}$/
+    },
+    email: {
+        type: String,
+        regEx: SimpleSchema.RegEx.Email
+    },
+    createdAt: {
+        type: Date
+    }
+});
+
+Meteor.users.attachSchema(Schema.User);
