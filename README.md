@@ -27,10 +27,12 @@ cd Example2
 Meteor
 
 ##Add Features
-mrt create Example2
-cd Example2
+mrt create Example3
+cd Example3
+
 ####*Nix
 mrt add collection2
+mrt add accounts-ui
 ####*Windows
 cd packages
 git clone https://github.com/aldeed/meteor-collection2.git collection2
@@ -39,5 +41,7 @@ git submodule update --init
 cd ..
 git clone https://github.com/aldeed/meteor-simple-schema.git simple-schema
 git submodule update --init
-
+meteor add simple-schema
+meteor add collection2
+meteor add accounts-ui
 
