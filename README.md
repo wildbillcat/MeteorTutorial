@@ -26,9 +26,12 @@ mrt create Example1
 cd Example1  
 Meteor  
   
-##Check out the Party App
-meteor create --example parties  
-cd parties  
+##Check out the Example Apps
+meteor create --example parties 
+meteor create --example leaderboard 
+meteor create --example todos 
+meteor create --example wordplay 
+cd leaderboard  
 Meteor  
   
 ##Add Features
