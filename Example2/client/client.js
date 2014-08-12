@@ -35,17 +35,11 @@ Template.details.creatorName = function () {
   return displayName(owner);
 };
 
+//Tests for ownership of the Icon
 Template.details.canRemove = function () {
-  return this.owner === Meteor.userId() && attending(this) === 0;
+  return this.owner === Meteor.userId();
 };
 
-Template.details.maybeChosen = function (what) {
-  var myRsvp = _.find(this.rsvps, function (r) {
-    return r.user === Meteor.userId();
-  }) || {};
-
-  return what == myRsvp.rsvp ? "chosen btn-inverse" : "";
-};
 
 Template.details.events({
   'click .rsvp_yes': function () {

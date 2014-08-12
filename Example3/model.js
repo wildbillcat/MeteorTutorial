@@ -1,8 +1,11 @@
+var Schemas = {};
+
+/////////////////////////////////////////////////////////
+///////////Characters Section
+/////////////////////////////////////////////////////////
 
 //Collection of characters in the match
 Characters = new Meteor.Collection("Characters");
-
-var Schemas = {};
 
 //Character Schema
 Schemas.Character = new SimpleSchema({
@@ -49,8 +52,49 @@ Schemas.Character = new SimpleSchema({
     }
 });
 
+/////////////////////////////////////////////////////////
+///////////User Section
+/////////////////////////////////////////////////////////
+
 //Attaches the character schema to the collection
 Characters.attachSchema(Schemas.Character); 
+
+//User Profile Field
+Schema.UserProfile = new SimpleSchema({
+    firstName: {
+        type: String,
+        regEx: /^[a-zA-Z-]{2,25}$/,
+        optional: true
+    },
+    lastName: {
+        type: String,
+        regEx: /^[a-zA-Z]{2,25}$/,
+        optional: true
+    },
+    birthday: {
+        type: Date,
+        optional: true
+    },
+    gender: {
+        type: String,
+        allowedValues: ['Male', 'Female'],
+        optional: true
+    },
+    organization: {
+        type: String,
+        regEx: /^[a-z0-9A-z .]{3,30}$/,
+        optional: true
+    },
+    website: {
+        type: String,
+        regEx: SimpleSchema.RegEx.Url,
+        optional: true
+    },
+    bio: {
+        type: String,
+        optional: true
+    }
+});
 
 //User Schema
 Schema.User = new SimpleSchema({
@@ -68,6 +112,10 @@ Schema.User = new SimpleSchema({
     },
     createdAt: {
         type: Date
+    },
+    profile: {
+        type: Schema.UserProfile,
+        optional: true
     }
 });
 
